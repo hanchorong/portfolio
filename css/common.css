@@ -1,0 +1,68 @@
+@import url("./reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap");
+
+html {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 3.5rem;
+}
+nav {
+  width: 85%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+  margin: 0 auto;
+}
+nav ul li {
+  cursor: pointer;
+}
+nav ul.pc_ul {
+  width: 30%;
+}
+.mobile_nav_div {
+  position: relative;
+  width: 3rem;
+  text-align: center;
+}
+nav button.hamburgerBtn {
+  display: none;
+  margin: 0 auto;
+}
+nav ul.mobile_ul {
+  position: absolute;
+  z-index: 10;
+  height: 9rem;
+}
+nav ul.mobile_ul li {
+  height: 3rem;
+  line-height: 3rem;
+}
+nav ul.pc_ul li {
+  display: inline-block;
+  width: 4rem;
+  text-align: center;
+}
+
+.display_none {
+  display: none;
+}
+.display_block {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  nav ul.pc_ul {
+    display: none;
+  }
+  .mobile_nav_div {
+    display: block;
+  }
+  .mobile_nav_div button.hamburgerBtn {
+    display: block;
+  }
+}
