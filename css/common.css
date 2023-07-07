@@ -1,13 +1,28 @@
 @import url("./reset.css");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
 html {
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --main-color: #85cd30;
+  --main-font: "Poppins", sans-serif;
+  --kor-font: "Noto Sans KR", sans-serif;
+}
+
+.display_none {
+  display: none;
+}
+.display_block {
+  display: block;
 }
 
 header {
+  position: fixed;
   width: 100%;
   height: 3.5rem;
+  background-color: transparent;
 }
 nav {
   width: 85%;
@@ -24,9 +39,28 @@ nav ul li {
 nav ul.pc_ul {
   width: 30%;
 }
+nav ul.pc_ul li {
+  position: relative;
+  display: inline-block;
+  width: 4rem;
+  text-align: center;
+  color: #85cd30;
+}
+nav ul.pc_ul li:hover::after {
+  display: block;
+}
+nav ul.pc_ul li::after {
+  content: ".";
+  font-weight: 700;
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
 .mobile_nav_div {
   position: relative;
-  width: 3rem;
+  width: 4rem;
   text-align: center;
 }
 nav button.hamburgerBtn {
@@ -36,26 +70,66 @@ nav button.hamburgerBtn {
 nav ul.mobile_ul {
   position: absolute;
   z-index: 10;
-  height: 9rem;
+  width: 100%;
 }
 nav ul.mobile_ul li {
+  width: 100%;
+  height: 4rem;
+  line-height: 4rem;
+}
+nav ul.mobile_ul li:hover span {
+  background: linear-gradient(135deg, #359ab6 0%, #aae95f 100%);
+}
+nav ul.mobile_ul li span {
+  text-shadow: 0.2px 0.2px 1px;
+  display: inline-block;
+  width: 100%;
   height: 3rem;
   line-height: 3rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  background: linear-gradient(135deg, #aae95f 0%, #359ab6 100%);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
-nav ul.pc_ul li {
-  display: inline-block;
-  width: 4rem;
+
+/* footer */
+footer {
+  width: 100%;
+  height: 15rem;
+  margin: 2rem 0;
+}
+footer .footer_wrap {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+}
+
+footer .footer_wrap h1 {
+  margin-bottom: 1.5rem;
+}
+
+footer .footer_wrap div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+footer .footer_wrap div ul li:first-child {
+  font-size: 1.4rem;
+}
+footer .footer_wrap div ul li:last-child {
+  font-weight: 300;
+  font-family: var(--kor-font);
+}
+
+footer .footer_wrap p {
+  font-size: 0.9rem;
+  font-weight: 200;
   text-align: center;
 }
 
-.display_none {
-  display: none;
-}
-.display_block {
-  display: block;
-}
-
 @media (max-width: 768px) {
+  /* nav */
   nav ul.pc_ul {
     display: none;
   }
@@ -64,5 +138,15 @@ nav ul.pc_ul li {
   }
   .mobile_nav_div button.hamburgerBtn {
     display: block;
+  }
+
+  /* footer */
+  footer .footer_wrap div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  footer .footer_wrap div ul {
+    margin-bottom: 0.5rem;
   }
 }

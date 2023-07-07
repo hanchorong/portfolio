@@ -15,24 +15,61 @@
   <body>
     <header>
       <nav>
-        <h3>Han's Portfolio</h3>
+        <h3><a href="/">Han's Portfolio</a></h3>
         <ul class="pc_ul">
           <li>Home</li>
           <li>About</li>
           <li>Work</li>
         </ul>
-        <!-- 햄버거버튼과 ul li를 감싸는 div relative-->
+
         <div class="mobile_nav_div display_none">
+          <!-- <div class="mobile_nav_div"> -->
           <button class="hamburgerBtn"><i class="fa-solid fa-bars"></i></button>
           <ul class="mobile_ul display_none">
-            <li>Home</li>
-            <li>About</li>
-            <li>Work</li>
+            <!-- <ul class="mobile_ul"> -->
+            <li><span>Home</span></li>
+            <li><span>About</span></li>
+            <li><span>Work</span></li>
           </ul>
         </div>
       </nav>
     </header>
-    <section class="main_greeting"></section>
-    <footer><div>footer</div></footer>
+
+    <section class="main_greeting">
+      <div class="main_wrap"></div>
+    </section>
+    <section class="about">
+      <div class="about_wrap"></div>
+    </section>
+
+    <!-- scroll top btn -->
+    <button class="topBtn display_none">
+      <i class="fa-regular fa-circle-up"></i>
+    </button>
+
+    <footer>
+      <div class="footer_wrap">
+        <h1>CONTACT</h1>
+        <div>
+          <ul>
+            <li>E-mail</li>
+            <li>hancrong@gmail.com</li>
+          </ul>
+          <ul>
+            <li>Github</li>
+            <li>
+              <a href="https://github.com/hanchorong" target="_blank"
+                >https://github.com/hanchorong</a
+              >
+            </li>
+          </ul>
+          <ul>
+            <li>Address</li>
+            <li>서울특별시 동작구 사당동</li>
+          </ul>
+        </div>
+        <p>© 2023. HAN All rights reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>
