@@ -3,6 +3,17 @@
 
 html {
   font-family: "Poppins", sans-serif;
+  /* font-size: 62.5%; */
+}
+
+/* @media (max-width: 1300px) {
+  html {
+    font-size: 58%;
+  }
+} */
+
+body {
+  /* font-size: 1.6rem; */
 }
 
 :root {
@@ -33,16 +44,20 @@ nav {
   justify-items: center;
   margin: 0 auto;
 }
+nav a {
+  font-size: 1.6rem;
+}
 nav ul li {
   cursor: pointer;
 }
 nav ul.pc_ul {
   width: 30%;
+  font-size: 1rem;
 }
 nav ul.pc_ul li {
   position: relative;
   display: inline-block;
-  width: 4rem;
+  width: 20%;
   text-align: center;
   color: #85cd30;
 }
