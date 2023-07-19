@@ -3,17 +3,9 @@
 
 html {
   font-family: "Poppins", sans-serif;
-  /* font-size: 62.5%; */
 }
 
-/* @media (max-width: 1300px) {
-  html {
-    font-size: 58%;
-  }
-} */
-
 body {
-  /* font-size: 1.6rem; */
 }
 
 :root {
@@ -29,11 +21,18 @@ body {
   display: block;
 }
 
+#wrap {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
 header {
   position: fixed;
   width: 100%;
   height: 3.5rem;
   background-color: transparent;
+  margin: 1.25rem 0;
+  z-index: 100;
 }
 nav {
   width: 85%;
@@ -52,14 +51,15 @@ nav ul li {
 }
 nav ul.pc_ul {
   width: 30%;
+  display: flex;
   font-size: 1rem;
 }
 nav ul.pc_ul li {
   position: relative;
   display: inline-block;
-  width: 20%;
+  width: 25%;
   text-align: center;
-  color: #85cd30;
+  color: #000;
 }
 nav ul.pc_ul li:hover::after {
   display: block;
@@ -143,7 +143,24 @@ footer .footer_wrap p {
   text-align: center;
 }
 
+@media (max-width: 480px) {
+  html {
+    font-size: 53.5%;
+  }
+  /* article */
+  .main_greeting article {
+    width: 85vw;
+    text-align: center;
+  }
+  .main_greeting .titleL {
+    font-size: 6rem;
+  }
+}
+
 @media (max-width: 768px) {
+  html {
+    font-size: 80%;
+  }
   /* nav */
   nav ul.pc_ul {
     display: none;
@@ -154,6 +171,21 @@ footer .footer_wrap p {
   .mobile_nav_div button.hamburgerBtn {
     display: block;
   }
+
+  /* article */
+  .main_greeting article {
+    width: 85vw;
+  }
+  /*
+  .main_greeting .desc {
+    font-size: 1.1rem;
+  }
+  .main_greeting .titleS {
+    font-size: 1.75rem;
+  }
+  .main_greeting .titleL {
+    line-height: 140px;
+  } */
 
   /* footer */
   footer .footer_wrap div {
