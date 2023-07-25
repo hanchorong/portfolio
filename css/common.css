@@ -1,5 +1,5 @@
 @import url("./reset.css");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Permanent+Marker&family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
 html {
   font-family: "Poppins", sans-serif;
@@ -12,6 +12,7 @@ body {
   --main-color: #85cd30;
   --main-font: "Poppins", sans-serif;
   --kor-font: "Noto Sans KR", sans-serif;
+  --back-font: "Permanent Marker", cursive;
 }
 
 .display_none {

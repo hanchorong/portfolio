@@ -33,12 +33,14 @@
 section {
   /* max-width: 1520px; */
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 /* section1 */
 
 section.main_greeting {
+  height: 100vh;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,7 +82,8 @@ section.main_greeting {
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: ease-in-out;
-  background-color: #faf7f5eb;
+  /* background-color: #faf7f5eb; */
+  background-color: #faf7f5;
 }
 @keyframes cube-rotate {
   from {
@@ -122,6 +125,7 @@ section.main_greeting {
 
 /* section 2 - about */
 section.about {
+  height: 100vh;
   position: relative;
   background-color: #faf7f5;
 }
@@ -146,7 +150,51 @@ section.about {
   font-weight: 700;
   text-align: left;
   padding: 2rem 0;
+  margin-bottom: 2rem;
 }
 .about_wrap .title span {
   color: #ddd;
+}
+.about_wrap .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about_wrap .content aside {
+  width: 30%;
+}
+.about_wrap .content article {
+  width: 60%;
+  font-family: var(--kor-font);
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 190%;
+}
+.about_wrap .content article p {
+  margin-bottom: 1.5rem;
+}
+
+/* section - project */
+section.project {
+  max-width: 1060px;
+  width: 100%;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+section.project .project_wrap {
+  position: relative;
+  height: 1000px;
+  text-align: center;
+  margin-bottom: 10vh;
+}
+section.project .back_title {
+  font-family: var(--back-font);
+  font-size: 4rem;
+  color: #ddd;
+  letter-spacing: 2px;
+  position: sticky;
+  top: 33%;
+  width: 100%;
+  margin-bottom: 6vh;
+  z-index: -1;
 }
