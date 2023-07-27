@@ -69,9 +69,8 @@ section.main_greeting {
   }
 }
 /* holo graphic */
-.titleL {
+.holo_graphic {
   margin: 3rem 0;
-  font-size: 8rem;
   font-weight: 800;
   position: relative;
   display: flex;
@@ -82,8 +81,6 @@ section.main_greeting {
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: ease-in-out;
-  /* background-color: #faf7f5eb; */
-  background-color: #faf7f5;
 }
 @keyframes cube-rotate {
   from {
@@ -104,6 +101,9 @@ section.main_greeting {
   }
 }
 .noise {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   width: 100%;
   height: 100%;
   padding: 8px;
@@ -117,12 +117,26 @@ section.main_greeting {
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+.holo_graphic span {
+  font-size: 1.75rem;
+}
+.holo_graphic span.titleL {
+  font-size: 8rem;
+  line-height: 10rem;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: antiquewhite;
+  mix-blend-mode: multiply;
+}
 @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
   .overlay {
     opacity: 0.6;
   }
 }
-
 /* section 2 - about */
 section.about {
   height: 100vh;
@@ -197,4 +211,14 @@ section.project .back_title {
   width: 100%;
   margin-bottom: 6vh;
   z-index: -1;
+}
+
+.project_list {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+}
+.project_list li {
+  width: 50%;
+  max-width: 385px;
 }
