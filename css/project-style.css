@@ -1,0 +1,9 @@
+#wrap {
+  position: relative;
+}
+a.go_home {
+  width: 5rem;
+  border-radius: 2.5rem;
+  border: 1px solid #000;
+  padding: 0.8rem 0;
+}

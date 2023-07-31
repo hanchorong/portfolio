@@ -16,12 +16,12 @@
     <div id="wrap">
       <header>
         <nav>
-          <h3><a href="/">Han's Portfolio</a></h3>
+          <h3><a class="logo" href="/">Han's Portfolio</a></h3>
           <ul class="pc_ul">
-            <li>Home</li>
-            <li>About</li>
-            <li>Work</li>
-            <li>Contact</li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
 
           <div class="mobile_nav_div display_none">
@@ -31,25 +31,25 @@
             </button>
             <ul class="mobile_ul display_none">
               <!-- <ul class="mobile_ul"> -->
-              <li><span>Home</span></li>
-              <li><span>About</span></li>
-              <li><span>Work</span></li>
-              <li><span>Contact</span></li>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#project">Project</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
         </nav>
       </header>
 
-      <section class="main_greeting">
+      <section id="home" class="main_greeting">
         <div class="main_wrap">
           <article>
             <div class="titleS">CODING & ME</div>
 
             <div class="holo_graphic">
               <div class="noise">
-                <span>&lt;h2&gt;</span>
+                <span>&lt;h1&gt;</span>
                 <span class="titleL">Like coding</span>
-                <span>&lt;/h2&gt;</span>
+                <span>&lt;/h1&gt;</span>
               </div>
               <div class="overlay"></div>
             </div>
@@ -62,7 +62,7 @@
         </div>
       </section>
 
-      <section class="about">
+      <section id="about">
         <div
           class="about_back"
           style="transform: translateY(200px) translateZ(0px)"
@@ -101,29 +101,52 @@
         </div>
       </section>
 
-      <section class="project">
+      <section id="project">
         <div class="project_wrap">
           <h2 class="back_title">My Projects</h2>
+
+          <div class="category">
+            <i class="fa-solid fa-map-pin"></i>
+            <ul class="category_list">
+              <li><button class="select_color">All</button>/</li>
+              <li><button>Work</button>/</li>
+              <li><button>Team</button>/</li>
+              <li><button>Personal</button></li>
+            </ul>
+          </div>
+
           <ul class="project_list">
-            <li>
-              <a href="#" target="_blank">
-                <img src="./img/about_pic.png" alt="project image" />
+            <li class="all team">
+              <a href="/project_1.html" target="_blank">
+                <div class="list_overlay"></div>
+                <div class="project_img">
+                  <img src="./img/about_pic.png" alt="project image" />
+                </div>
+                <div class="list_desc">
+                  <h3>project1111</h3>
+                  <p>PC / Mobile</p>
+                  <p>기간 22.01 ~ 22.05</p>
+                </div>
               </a>
-              <div class="list_desc">
-                <h3>project1111</h3>
-                <p>PC / Mobile</p>
-                <p>기간 22.01 ~ 22.05</p>
-              </div>
+            </li>
+            <li class="all work">
+              <div class="list_overlay"></div>
+              <a href="#" target="_blank">
+                <div class="project_img">
+                  <img src="./img/about_pic.png" alt="project image" />
+                </div>
+                <div class="list_desc">
+                  <h3>project1111</h3>
+                  <p>PC / Mobile</p>
+                  <p>기간 22.01 ~ 22.05</p>
+                </div>
+              </a>
             </li>
           </ul>
         </div>
       </section>
-      <!-- scroll top btn -->
-      <button class="topBtn display_none">
-        <i class="fa-regular fa-circle-up"></i>
-      </button>
 
-      <footer>
+      <footer id="contact">
         <div class="footer_wrap">
           <h1>CONTACT</h1>
           <div>
@@ -147,6 +170,11 @@
           <p>© 2023. HAN All rights reserved.</p>
         </div>
       </footer>
+
+      <!-- scroll top btn -->
+      <button class="topBtn display_none">
+        <i class="fa-regular fa-circle-up"></i>
+      </button>
     </div>
   </body>
 </html>

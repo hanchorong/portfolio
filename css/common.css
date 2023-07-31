@@ -3,6 +3,7 @@
 
 html {
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -44,21 +45,22 @@ nav {
   justify-items: center;
   margin: 0 auto;
 }
-nav a {
+nav .logo {
   font-size: 1.6rem;
 }
 nav ul li {
   cursor: pointer;
 }
 nav ul.pc_ul {
-  width: 30%;
+  /* width: 30%; */
   display: flex;
   font-size: 1rem;
 }
 nav ul.pc_ul li {
   position: relative;
   display: inline-block;
-  width: 25%;
+  /* width: 25%; */
+  padding: 0 1rem;
   text-align: center;
   color: #000;
 }

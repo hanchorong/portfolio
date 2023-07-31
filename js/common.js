@@ -50,3 +50,27 @@ window.addEventListener("resize", checkWindowHeight);
 $topButton.onclick = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
+
+// project select category
+
+const targetList = document.querySelector(".category_list");
+const $all = document.querySelector(".all");
+const $work = document.querySelector(".work");
+const $team = document.querySelector(".team");
+const $personal = document.querySelector(".personal");
+const class_select_color = "select_color";
+const test = document.querySelector(".category_list button");
+
+const projectSelect = (e) => {
+  console.log(e.target.textContent);
+
+  if (e.target.textContent) {
+    e.target.classList.add(class_select_color);
+    // console.log(e.target.parentElement.silblingNode);
+    // const parentSib_ = e.target.parentElement.previousElementSibling;
+    // parentSib_.classList.remove(class_select_color);
+  } else {
+  }
+};
+
+targetList.addEventListener("click", projectSelect);
