@@ -158,6 +158,18 @@ footer .footer_wrap p {
   .main_greeting .titleL {
     font-size: 6rem;
   }
+
+  /* section - project */
+  section#project .project_list {
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  section#project .project_list li {
+    width: 100%;
+    margin: 1rem 0;
+  }
 }
 
 @media (max-width: 768px) {

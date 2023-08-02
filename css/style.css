@@ -199,7 +199,6 @@ section#project {
 }
 section#project .project_wrap {
   position: relative;
-  height: 1000px;
   text-align: center;
   margin-bottom: 10vh;
 }
@@ -232,7 +231,13 @@ section#project .back_title {
 #project .category_list li {
   color: #e2c49c;
 }
-.category_list .select_color {
+#project .category_list li:first-child {
+  color: #000;
+}
+#project .category_list li:hover button {
+  color: #000;
+}
+.select_color {
   color: #000 !important;
 }
 #project .category_list li button {
@@ -256,6 +261,7 @@ section#project .back_title {
   transition: 0.3s;
   border-radius: 0.8rem;
   overflow: hidden;
+  margin: 0 1rem;
 }
 .project_list li .list_desc {
   margin: 1rem 0;

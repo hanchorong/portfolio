@@ -52,25 +52,27 @@ $topButton.onclick = () => {
 };
 
 // project select category
+const $category_list_li = document.querySelectorAll(".category_list li");
+const project_list_li = document.querySelectorAll(".project_list li");
 
-const targetList = document.querySelector(".category_list");
-const $all = document.querySelector(".all");
-const $work = document.querySelector(".work");
-const $team = document.querySelector(".team");
-const $personal = document.querySelector(".personal");
-const class_select_color = "select_color";
-const test = document.querySelector(".category_list button");
+$category_list_li.forEach((li) => {
+  li.addEventListener("click", function () {
+    $category_list_li.forEach((item) => (item.style.color = "#e2c49c"));
+    this.style.color = "#000";
 
-const projectSelect = (e) => {
-  console.log(e.target.textContent);
-
-  if (e.target.textContent) {
-    e.target.classList.add(class_select_color);
-    // console.log(e.target.parentElement.silblingNode);
-    // const parentSib_ = e.target.parentElement.previousElementSibling;
-    // parentSib_.classList.remove(class_select_color);
-  } else {
-  }
-};
-
-targetList.addEventListener("click", projectSelect);
+    // show project list
+    project_list_li.forEach((li) => {
+      if (this.className === "all") {
+        li.classList.add("display_block");
+        li.classList.remove("display_none");
+      } else if (this.className === li.id) {
+        li.classList.add("display_block");
+        li.classList.remove("display_none");
+      } else {
+        console.log("else", li);
+        li.classList.add("display_none");
+        li.classList.remove("display_block");
+      }
+    });
+  });
+});
