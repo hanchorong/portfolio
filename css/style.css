@@ -26,7 +26,7 @@
 }
 .topBtn i {
   font-size: 1.8rem;
-  color: var(--main-color);
+  color: #999;
   text-shadow: -0.5px -1.5px 1px #00000012;
 }
 
@@ -143,7 +143,6 @@ section#about {
   position: relative;
   background-color: #faf7f5;
 }
-
 .about_back {
   position: absolute;
   z-index: -1;
@@ -151,21 +150,19 @@ section#about {
   width: 100%;
   height: 100%;
 }
-
 .about_wrap {
   width: 85%;
   height: 100%;
   margin: 0 auto;
   opacity: 0;
 }
-
-.about_wrap .title {
+/* .about_wrap .title {
   font-size: 3rem;
   font-weight: 700;
   text-align: left;
   padding: 2rem 0;
   margin-bottom: 2rem;
-}
+} */
 .about_wrap .title span {
   color: #ddd;
 }
@@ -186,6 +183,47 @@ section#about {
 }
 .about_wrap .content article p {
   margin-bottom: 1.5rem;
+}
+
+/* section - information */
+#information {
+  height: 100vh;
+  font-family: var(--kor-font);
+}
+#information .info_wrap {
+  width: 90%;
+  margin: 5rem auto;
+}
+#information .info_wrap .title {
+  margin-bottom: 5rem;
+}
+#information .info_wrap p {
+  color: #333333;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+#information .info_wrap .flexBox {
+  display: flex;
+  justify-content: space-around;
+}
+#information .info_wrap .flexBox li {
+  padding-bottom: 1rem;
+}
+#information .info_wrap .flexBox li span {
+  color: #999;
+  font-weight: 200;
+  padding-right: 1rem;
+}
+#information .info_wrap .flexBox hr {
+  border: 0.3px solid #dddcdc;
+}
+#information .info_wrap .skills {
+  text-align: center;
+  margin: 4rem auto;
+}
+#information .info_wrap .skills img {
+  height: 1.5rem;
 }
 
 /* section - project */
@@ -246,22 +284,41 @@ section#project .back_title {
 }
 
 .project_list {
+  /* width: 90%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; */
   width: 90%;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 .project_list li {
   position: relative;
-  width: 50%;
+  width: 49%;
   max-width: 385px;
+  min-height: 20rem;
   box-shadow: 5px 5px 14px rgba(55, 55, 55, 0.1);
   margin-bottom: 9vh;
   background-color: #fff;
   transition: 0.3s;
   border-radius: 0.8rem;
   overflow: hidden;
-  margin: 0 1rem;
+  /* margin: 0 1rem; */
+}
+section#project .project_list .project_img {
+  width: 100%;
+  height: 55%;
+}
+section#project .project_list .project_img img {
+  width: 100%;
+  height: 100%;
 }
 .project_list li .list_desc {
   margin: 1rem 0;
@@ -292,7 +349,7 @@ section#project .back_title {
   color: #fff;
   border-radius: 2.5rem;
   border: 1px solid #fff;
-  width: 40%;
-  padding: 0.8rem 0;
+  width: 50%;
+  padding: 0.5rem 0.3rem;
   cursor: pointer;
 }
