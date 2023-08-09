@@ -45,6 +45,8 @@ section.main_greeting {
   align-items: center;
 }
 .main_wrap {
+  width: 90%;
+  margin: 0 auto;
 }
 .main_greeting article {
   animation: fadeIn 0.5s 0.1s ease-in forwards;
@@ -69,7 +71,8 @@ section.main_greeting {
 }
 /* holo graphic */
 .holo_graphic {
-  margin: 3rem 0;
+  max-width: 900px;
+  margin: 3rem auto 4rem;
   font-weight: 800;
   position: relative;
   display: flex;
@@ -101,9 +104,10 @@ section.main_greeting {
 }
 .noise {
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 100%;
+  width: 90%;
   height: 100%;
   padding: 8px;
   background: linear-gradient(24deg, rgba(50 0 255/10%), CornflowerBlue),
@@ -115,13 +119,14 @@ section.main_greeting {
   animation-name: shimmer;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+  text-align: center;
 }
 .holo_graphic span {
   font-size: 1.75rem;
 }
 .holo_graphic span.titleL {
   font-size: 8rem;
-  line-height: 10rem;
+  line-height: 8.5rem;
 }
 .overlay {
   position: absolute;
@@ -157,12 +162,10 @@ section#about {
   opacity: 0;
 }
 /* .about_wrap .title {
-  font-size: 3rem;
-  font-weight: 700;
-  text-align: left;
-  padding: 2rem 0;
-  margin-bottom: 2rem;
+  opacity: 0;
+  animation: titleAnim 0.1s 1.5s ease-in-out forwards;
 } */
+
 .about_wrap .title span {
   color: #ddd;
 }
@@ -193,6 +196,7 @@ section#about {
 #information .info_wrap {
   width: 90%;
   margin: 5rem auto;
+  opacity: 0;
 }
 #information .info_wrap .title {
   margin-bottom: 5rem;
@@ -217,6 +221,7 @@ section#about {
 }
 #information .info_wrap .flexBox hr {
   border: 0.3px solid #dddcdc;
+  margin: 0;
 }
 #information .info_wrap .skills {
   text-align: center;
@@ -236,6 +241,7 @@ section#project {
   margin: 0 auto;
 }
 section#project .project_wrap {
+  opacity: 0;
   position: relative;
   text-align: center;
   margin-bottom: 10vh;

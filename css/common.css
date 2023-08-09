@@ -23,12 +23,23 @@ body {
   display: block;
 }
 .title {
+  opacity: 0;
   font-family: var(--main-font);
   font-size: 3rem;
   font-weight: 700;
   text-align: left;
   padding: 2rem 0;
   margin-bottom: 2rem;
+  animation: titleAnim 0.1s 1.5s ease-in-out forwards;
+}
+@keyframes titleAnim {
+  0% {
+    transform: translateX(-30%);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 #wrap {
   max-width: 1920px;
@@ -197,6 +208,10 @@ footer .footer_wrap p {
   /* article */
   .main_greeting article {
     width: 85vw;
+  }
+  .main_greeting .holo_graphic .noise .titleL {
+    font-size: 6rem;
+    line-height: 7rem;
   }
   /*
   .main_greeting .desc {
