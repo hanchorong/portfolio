@@ -17,21 +17,18 @@ $hamburgerBtn.addEventListener("click", () => {
 });
 
 //scroll event
-const $topButton = document.querySelector(".topBtn");
-// const $mainArticle = document.querySelector(".main_wrap article");
-const $about_back = document.querySelector(".about_back");
-const $about_wrap = document.querySelector(".about_wrap");
-const $info_wrap = document.querySelector(".info_wrap");
-
-const $section_main = document.querySelector("#main");
+// const $section_main = document.querySelector("#main");
 const $section_about = document.querySelector("#about");
-const $section_information = document.querySelector("#information");
-const $section_project = document.querySelector("#project");
-const $section_contact = document.querySelector("#contact");
-
+// const $section_information = document.querySelector("#information");
+// const $section_project = document.querySelector("#project");
+// const $section_contact = document.querySelector("#contact");
 const $sections = document.querySelectorAll("section");
+const $topButton = document.querySelector(".topBtn");
+// const $about_back = document.querySelector(".about_back");
+// const $mainArticle = document.querySelector(".main_wrap article");
+// const $about_wrap = document.querySelector(".about_wrap");
+// const $info_wrap = document.querySelector(".info_wrap");
 
-// console.log($section_information);
 function checkWindowHeight() {
   const scroll_Y = window.scrollY;
 
@@ -43,45 +40,32 @@ function checkWindowHeight() {
     $topButton.classList.remove("display_block");
     $topButton.classList.add("display_none");
   }
-  console.log($section_information.offsetTop, scroll_Y + 600);
-
-  // if ($section_about.offsetTop < scroll_Y + 400) {
-  //   //이미충족됨
-  //   console.log("section_about");
-  //   $about_wrap.classList.add("fadeIn");
-
-  // } else if ($section_information.offsetTop < scroll_Y + 600) {
-  //   $info_wrap.classList.add("fadeIn");
-  //   console.log("---");
-  // }
 
   $sections.forEach(function (section_) {
-    // console.log(section_); //0, 703, 1486, 2189
-    // sections들의 최상단 단위를 받아와서 지금 윈도우 높이 + 스크롤 높이 - 200
-    // console.log(
-    //   "section_.offsetTop",
-    //   section_.offsetTop,
-    //   "window.innerH",
-    //   window.innerHeight,
-    //   "scroll_Y",
-    //   scroll_Y
-    // );
+    const section_wrap = section_.querySelector(":nth-child(1)");
+    const $title = section_.querySelector(".title");
+    const $about_back = section_.querySelector(".about_back");
 
-    const test = section_.querySelector(":nth-child(1)");
-
-    console.log(test);
     if (section_.offsetTop < window.innerHeight + scroll_Y + 100) {
-      test.classList.add("fadeIn");
+      section_wrap.classList.add("fadeIn");
+      // section_wrap.classList.remove("fadeout");
+
+      if ($title) {
+        $title.classList.add("title_anim");
+      }
+      if ($about_back) {
+        $about_back.style.transform = "translateY(" + (-scroll_Y - 500) + "px)";
+      }
     } else {
-      // $mainArticle.classList.remove("fadeout");
+      // section_wrap.classList.add("fadeout");
+      // section_wrap.classList.remove("fadeIn");
     }
   });
-
-  $about_back.style.transform = `translateY(${-scroll_Y}px) translateZ(0px)`;
 }
 
 window.addEventListener("scroll", checkWindowHeight);
 window.addEventListener("resize", checkWindowHeight);
+window.addEventListener("orientationchange", checkWindowHeight);
 
 $topButton.onclick = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });

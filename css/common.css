@@ -30,7 +30,9 @@ body {
   text-align: left;
   padding: 2rem 0;
   margin-bottom: 2rem;
-  animation: titleAnim 0.1s 1.5s ease-in-out forwards;
+}
+.title_anim {
+  animation: titleAnim 0.5s 1s ease-in-out forwards;
 }
 @keyframes titleAnim {
   0% {
