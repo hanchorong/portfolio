@@ -226,10 +226,11 @@ section#about {
 }
 #information .info_wrap .skills {
   text-align: center;
-  margin: 4rem auto;
+  margin: 6rem auto;
 }
 #information .info_wrap .skills img {
   height: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 /* section - project */
@@ -291,10 +292,6 @@ section#project .back_title {
 }
 
 .project_list {
-  /* width: 90%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; */
   width: 90%;
   margin: 0 auto;
   display: -webkit-box;
@@ -359,4 +356,5 @@ section#project .project_list .project_img img {
   width: 50%;
   padding: 0.5rem 0.3rem;
   cursor: pointer;
+  pointer-events: none;
 }

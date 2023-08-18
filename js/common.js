@@ -46,19 +46,16 @@ function checkWindowHeight() {
     const $title = section_.querySelector(".title");
     const $about_back = section_.querySelector(".about_back");
 
-    if (section_.offsetTop < window.innerHeight + scroll_Y + 100) {
+    if (section_.offsetTop < window.innerHeight + scroll_Y) {
       section_wrap.classList.add("fadeIn");
       // section_wrap.classList.remove("fadeout");
-
+      // console.log(section_.offsetTop, window.innerHeight, scroll_Y);
       if ($title) {
         $title.classList.add("title_anim");
       }
       if ($about_back) {
         $about_back.style.transform = "translateY(" + (-scroll_Y - 500) + "px)";
       }
-    } else {
-      // section_wrap.classList.add("fadeout");
-      // section_wrap.classList.remove("fadeIn");
     }
   });
 }

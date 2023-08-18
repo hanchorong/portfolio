@@ -103,7 +103,7 @@ nav ul.pc_ul li::after {
 }
 nav button.hamburgerBtn {
   display: none;
-  margin: 0 auto;
+  margin-left: 2.5rem;
 }
 nav ul.mobile_ul {
   position: absolute;
@@ -170,7 +170,7 @@ footer .footer_wrap p {
   html {
     font-size: 53.5%;
   }
-  /* article */
+  /* section - main_greeting */
   .main_greeting article {
     width: 85vw;
     text-align: center;
@@ -179,6 +179,21 @@ footer .footer_wrap p {
     font-size: 6rem;
   }
 
+  /* section - about */
+  section#about {
+    height: fit-content !important;
+  }
+  section#about .about_wrap .content {
+    flex-direction: column;
+  }
+  section#about .about_wrap .content aside {
+    width: auto;
+    margin-bottom: 1.8rem;
+  }
+  section#about .about_wrap .content article {
+    width: auto;
+    padding-left: 1.5rem;
+  }
   /* section - project */
   section#project .project_list {
     flex-wrap: wrap;
@@ -210,21 +225,12 @@ footer .footer_wrap p {
   /* article */
   .main_greeting article {
     width: 85vw;
+    margin: 0 auto;
   }
   .main_greeting .holo_graphic .noise .titleL {
     font-size: 6rem;
     line-height: 7rem;
   }
-  /*
-  .main_greeting .desc {
-    font-size: 1.1rem;
-  }
-  .main_greeting .titleS {
-    font-size: 1.75rem;
-  }
-  .main_greeting .titleL {
-    line-height: 140px;
-  } */
 
   /* section - project */
   section .project_list {
@@ -245,8 +251,8 @@ footer .footer_wrap p {
     margin-bottom: 0.5rem;
   }
 
-  /* topBtn */
+  /* topBtn 
   .topBtn {
     right: 3rem !important;
-  }
+  }*/
 }
