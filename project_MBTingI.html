@@ -9,17 +9,121 @@
       src="https://kit.fontawesome.com/c44f54db1d.js"
       crossorigin="anonymous"
     ></script>
+    <!-- <script src="./js/common.js" defer></script> -->
+    <script src="./js/project.js" defer></script>
     <title>project - MBTingI</title>
   </head>
   <body>
     <div id="wrap">
       <header>
-        <h3><a href="#">Han's Portfolio</a></h3>
-        <a class="go_home" href="/index.html">
-          <i class="fa-solid fa-arrow-left-long"></i>
-          <span>Go Home</span>
-        </a>
+        <nav>
+          <h3><a href="#">Han's Portfolio</a></h3>
+          <a class="go_home" href="/index.html">
+            <i class="fa-solid fa-arrow-left-long"></i>
+            <span>Home</span>
+          </a>
+        </nav>
       </header>
+
+      <section id="prj_main">
+        <div class="prj_main_wrap">
+          <img src="./img/mbtingi_thumb.png" alt="project main image" />
+          <div class="title_area">
+            <h2>MBTingI(엠비팅아이)</h2>
+            <p>PC / Mobile</p>
+            <p>퍼블리싱 / 2주 소요</p>
+            <a
+              href="https://github.com/hanchorong/Project_MBTingI"
+              target="_blank"
+              ><i class="fa-solid fa-link"></i> Github</a
+            >
+          </div>
+
+          <div class="intro">
+            <div class="prj_title">Intro</div>
+            <div class="prj_divider"></div>
+            <textarea readonly>
+나랑 딱 맞는 MBTI 끼리끼리. 
+자신의 MBTI를 입력하여 맞춤 상대를 찾아주는 소개팅 서비스입니다. 
+256가지의 MBTI 데이터를 이용해서 선별한 이성을 만나 1:1 채팅을 할 수 있습니다.
+</textarea
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="role">
+        <div class="role_wrap">
+          <div class="prj_title">My Role</div>
+          <div class="prj_divider"></div>
+          <textarea readonly>
+- Position: Front_end
+- Stack : HTML, CSS, Javacript, Express, Axios
+- Work : 퍼블리싱, 유효성검사, Axios 요청.
+  회원가입 페이지 구현
+  로그인 페이지 구현
+  아이디/비밀번호 찾기 구현
+  프로필 셋팅 페이지 구현
+  매칭페이지 구현
+  채팅페이지 퍼블리싱
+  마이페이지 구현 - 계정정보, 매칭 프로필정보 수정 구현
+</textarea
+          >
+        </div>
+      </section>
+
+      <section id="detail">
+        <div class="detail_wrap">
+          <div class="prj_title">Detail</div>
+          <div class="prj_divider"></div>
+          <ul>
+            <li>
+              <p>메엔화면</p>
+              <img src="./img/prj/mbtingi/1.gif" />
+              <textarea></textarea>
+            </li>
+            <li>
+              <p>회원가입</p>
+              <img src="./img/prj/mbtingi/2.gif" />
+              <textarea></textarea>
+            </li>
+            <li>
+              <p>로그인</p>
+              <img src="./img/prj/mbtingi/3.gif" />
+              <textarea></textarea>
+            </li>
+            <li>
+              <p>아이디/패스워드 재설정</p>
+              <img src="./img/prj/mbtingi/4.gif" />
+              <textarea></textarea>
+            </li>
+            <li>
+              <p>매칭</p>
+              <img src="./img/prj/mbtingi/5.gif" />
+              <textarea></textarea>
+            </li>
+            <li>
+              <p>채팅</p>
+              <img src="./img/prj/mbtingi/6.gif" />
+              <textarea></textarea>
+            </li>
+          </ul>
+
+          <textarea class="auto-resize" readonly></textarea>
+        </div>
+      </section>
+
+      <section id="award">
+        <div class="award_warp">
+          <div class="prj_title">Awards</div>
+          <div class="prj_divider"></div>
+          <img src="./img/prj/mbtingi/award.webp" alt="award" />
+        </div>
+      </section>
+      <!-- scroll top btn -->
+      <button class="topBtn display_none">
+        <i class="fa-regular fa-circle-up fa-beat-fade"></i>
+      </button>
     </div>
   </body>
 </html>

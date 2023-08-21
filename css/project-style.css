@@ -2,8 +2,104 @@
   position: relative;
 }
 a.go_home {
-  width: 5rem;
   border-radius: 2.5rem;
   border: 1px solid #000;
-  padding: 0.8rem 0;
+  padding: 0.6rem 2rem;
+}
+a.go_home:hover {
+  background-color: #000000bc;
+  color: #fff;
+}
+
+/* prj main */
+section#prj_main {
+  width: 100%;
+}
+.prj_main_wrap {
+  padding: 3.75rem 0 0;
+}
+.prj_main_wrap img {
+}
+.prj_main_wrap .title_area {
+  position: absolute;
+  top: 1;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffffca;
+  padding: 1.5rem 3rem;
+  font-family: var(--kor-font);
+  font-weight: 300;
+  border-radius: 0.2rem;
+  text-align: center;
+  box-shadow: 1px 1px 7px #00000030;
+}
+.prj_main_wrap .title_area h2 {
+  margin-bottom: 0.8rem;
+}
+.prj_main_wrap .intro {
+  width: 90%;
+  margin: 7rem auto 0;
+}
+textarea {
+  font-size: 1.1rem;
+  color: #4e4e4e;
+  width: 100%;
+  overflow: hidden;
+  resize: none;
+  border: 0;
+  font-family: var(--kor-font);
+  line-height: 2rem;
+}
+.prj_title {
+  font-size: 1.3rem;
+}
+.prj_divider {
+  border: 0.7px solid #000;
+  margin-bottom: 0.7rem;
+}
+
+/* section - role */
+section#role .role_wrap {
+  width: 90%;
+  margin: 4rem auto 0;
+}
+
+/* section - detail */
+section#detail .detail_wrap {
+  width: 90%;
+  margin: 4rem auto 0;
+}
+.detail_wrap ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.detail_wrap ul li {
+  width: 47%;
+}
+.detail_wrap ul li img {
+  width: 100%;
+  height: fit-content;
+}
+
+/* section - awards */
+section#award .award_warp {
+  width: 90%;
+  margin: 4rem auto 0;
+}
+section#award img {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .detail_wrap ul {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .detail_wrap ul li {
+    width: 100%;
+  }
 }
