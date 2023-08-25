@@ -19,6 +19,23 @@ section#prj_main {
   padding: 3.75rem 0 0;
 }
 .prj_main_wrap img {
+  opacity: 0;
+  animation: fadeIn 0.5s 0.3s ease-in forwards;
+}
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes transformUp {
+  0% {
+    /* transform: translateY(1); */
+    transform: translate(-50%, -20%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
 }
 .prj_main_wrap .title_area {
   position: absolute;
@@ -32,6 +49,8 @@ section#prj_main {
   border-radius: 0.2rem;
   text-align: center;
   box-shadow: 1px 1px 7px #00000030;
+  animation: transformUp 0.5s 0.5s ease-in-out forwards;
+  opacity: 0;
 }
 .prj_main_wrap .title_area h2 {
   margin-bottom: 0.8rem;

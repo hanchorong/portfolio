@@ -22,6 +22,19 @@ body {
 .display_block {
   display: block;
 }
+.topBtn {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  width: 2rem;
+  height: 2rem;
+  z-index: 100;
+}
+.topBtn i {
+  font-size: 1.8rem;
+  color: #999;
+  text-shadow: -0.5px -1.5px 1px #00000012;
+}
 .title {
   opacity: 0;
   font-family: var(--main-font);
@@ -222,7 +235,7 @@ footer .footer_wrap p {
     display: block;
   }
 
-  /* article */
+  /* section - main */
   .main_greeting article {
     width: 85vw;
     margin: 0 auto;
@@ -230,6 +243,20 @@ footer .footer_wrap p {
   .main_greeting .holo_graphic .noise .titleL {
     font-size: 6rem;
     line-height: 7rem;
+  }
+
+  /* section - about */
+  #information .info_wrap .title {
+    margin-bottom: 3rem !important;
+  }
+  section#information .flexBox {
+    flex-direction: column;
+  }
+  section#information .flexBox ul {
+    margin: 1rem 0;
+  }
+  #information .info_wrap .flexBox li span {
+    display: block;
   }
 
   /* section - project */
@@ -250,9 +277,4 @@ footer .footer_wrap p {
   footer .footer_wrap div ul {
     margin-bottom: 0.5rem;
   }
-
-  /* topBtn 
-  .topBtn {
-    right: 3rem !important;
-  }*/
 }
