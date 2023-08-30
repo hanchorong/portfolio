@@ -56,8 +56,9 @@ function checkWindowHeight() {
     const $about_back = section_.querySelector(".about_back");
     const $project_list = section_.querySelector(".project_list");
 
-    if (section_.offsetTop < window.innerHeight + scroll_Y - 150) {
+    if (section_.offsetTop < window.innerHeight + scroll_Y) {
       section_wrap.classList.add("fadeIn");
+      section_wrap.classList.remove("fadeout");
 
       if ($title) {
         $title.classList.add("title_anim");
@@ -68,7 +69,11 @@ function checkWindowHeight() {
       if ($project_list) {
         $project_list.classList.add("transformList");
       }
+    } else if (section_.offsetTop > scroll_Y) {
+      section_wrap.classList.add("fadeout");
+      section_wrap.classList.remove("fadeIn");
     }
+    //스크롤을 움직였을때 들어오는 각section의 상단값 < 현재 윈도우의 높이값 + 스크롤 세로위치 일때
   });
 }
 
