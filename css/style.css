@@ -119,7 +119,8 @@ section.main_greeting {
   top: 0;
   width: 100%;
   height: 100%;
-  background: antiquewhite;
+  /* background: antiquewhite; */
+  background-color: #f6f6f7;
   mix-blend-mode: multiply;
 }
 @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
@@ -132,12 +133,14 @@ section.main_greeting {
 section#about {
   height: 100vh;
   position: relative;
-  background-color: #faf7f5;
+  /* background-color: #faf7f5; */
+  background-color: #f6f6f7;
 }
 .about_back {
   position: absolute;
   z-index: -1;
-  background: linear-gradient(357deg, #faf7f5, #faf7f5, #faf7f5d1);
+  /* background: linear-gradient(357deg, #faf7f5, #faf7f5, #faf7f5d1); */
+  background-color: #f6f6f7;
   width: 100%;
   height: 100%;
 }
