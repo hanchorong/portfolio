@@ -65,9 +65,15 @@ header {
   position: fixed;
   width: 100%;
   height: 3.75rem;
-  background-color: #ffffffa3;
   padding: 1.25rem 0;
   z-index: 100;
+}
+header .header-wrap {
+  background-color: #ffffffa3;
+  width: 90%;
+  margin: 0 auto;
+  border-top: 0.5px solid #000;
+  border-bottom: 0.5px solid #000;
 }
 nav {
   width: 85%;
@@ -77,6 +83,7 @@ nav {
   align-items: center;
   justify-items: center;
   margin: 0 auto;
+  /* border-bottom: 1px solid #000; */
 }
 nav .logo {
   font-size: 1.6rem;
@@ -85,17 +92,14 @@ nav ul li {
   cursor: pointer;
 }
 nav ul.pc_ul {
-  /* width: 30%; */
   display: flex;
   font-size: 1rem;
 }
 nav ul.pc_ul li {
   position: relative;
-  display: inline-block;
-  /* width: 25%; */
   padding: 0 1rem;
-  text-align: center;
   color: #000;
+  font-weight: 100;
 }
 nav ul.pc_ul li:hover::after {
   display: block;
@@ -111,36 +115,21 @@ nav ul.pc_ul li::after {
 }
 .mobile_nav_div {
   position: relative;
-  width: 4rem;
-  text-align: center;
+  width: 7rem;
 }
 nav button.hamburgerBtn {
   display: none;
-  margin-left: 2.5rem;
+  margin-left: auto;
 }
 nav ul.mobile_ul {
   position: absolute;
   z-index: 10;
   width: 100%;
+  text-align: right;
 }
 nav ul.mobile_ul li {
-  width: 100%;
-  height: 4rem;
-  line-height: 4rem;
-}
-nav ul.mobile_ul li:hover span {
-  background: linear-gradient(135deg, #359ab6 0%, #aae95f 100%);
-}
-nav ul.mobile_ul li span {
-  text-shadow: 0.2px 0.2px 1px;
   display: inline-block;
-  width: 100%;
-  height: 3rem;
-  line-height: 3rem;
-  border-radius: 0.5rem;
-  color: #fff;
-  background: linear-gradient(135deg, #aae95f 0%, #359ab6 100%);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  line-height: 4rem;
 }
 
 /* footer */
