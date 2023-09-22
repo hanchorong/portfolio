@@ -20,19 +20,6 @@ if ($hamburgerBtn) {
   $hamburgerBtn.addEventListener("click", onClickHamburgerBtn);
 }
 
-// $hamburgerBtn.addEventListener("click", () => {
-//   mobile_ul.classList.add("display_block");
-//   mobile_ul.classList.remove("display_none");
-
-//   if (btnStatus.className === "fa-solid fa-bars") {
-//     btnStatus.className = "fa-regular fa-circle-xmark";
-//   } else {
-//     btnStatus.className = "fa-solid fa-bars";
-//     mobile_ul.classList.add("display_none");
-//     mobile_ul.classList.remove("display_block");
-//   }
-// });
-
 //scroll event
 const $sections = document.querySelectorAll("section");
 const $topButton = document.querySelector(".topBtn");
@@ -69,11 +56,10 @@ function checkWindowHeight() {
       if ($project_list) {
         $project_list.classList.add("transformList");
       }
-    } else if (section_.offsetTop > scroll_Y) {
+    } else {
       section_wrap.classList.add("fadeout");
       section_wrap.classList.remove("fadeIn");
     }
-    //스크롤을 움직였을때 들어오는 각section의 상단값 < 현재 윈도우의 높이값 + 스크롤 세로위치 일때
   });
 }
 

@@ -122,3 +122,12 @@ section#award img {
     width: 100%;
   }
 }
+
+@media (max-width: 480px) {
+  nav {
+    font-size: 1.5rem;
+  }
+  section#prj_main {
+    padding-top: 2rem;
+  }
+}

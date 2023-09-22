@@ -41,15 +41,36 @@ section.main_greeting {
   animation: titleAnim 0.5s 1s ease-in-out forwards;
 }
 .desc {
+  position: relative;
+  text-align: center;
   opacity: 0;
   font-size: 1.25rem;
-  font-weight: 300;
+  font-weight: 400;
   font-family: var(--kor-font);
   animation: fadeIn 0.5s 0.8s ease-in forwards;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.desc::after {
+  background: currentColor;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  transform: scaleX(0);
+  width: 100%;
+  animation: underline 0.8s 0.8s ease-in-out forwards;
 }
 @keyframes fadeIn {
   100% {
     opacity: 1;
+  }
+}
+@keyframes underline {
+  100% {
+    transform: scaleX(1);
   }
 }
 /* holo graphic */
@@ -266,8 +287,8 @@ section#project .back_title {
   position: sticky;
   top: 33%;
   width: 100%;
-  margin-bottom: 6vh;
   z-index: -1;
+  /* margin-bottom: 6vh; */
 }
 
 /* category */
