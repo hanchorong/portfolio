@@ -44,6 +44,7 @@ function checkWindowHeight() {
     const $project_list = section_.querySelector(".project_list");
 
     if (section_.offsetTop < window.innerHeight + scroll_Y) {
+      console.log(window.innerHeight + scroll_Y);
       section_wrap.classList.add("fadeIn");
       section_wrap.classList.remove("fadeout");
 
